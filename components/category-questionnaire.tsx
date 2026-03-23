@@ -311,7 +311,7 @@ export function CategoryQuestionnaire({
 
         <TableCell className="w-[30%]">
           <div className="space-y-3">
-            <div className="flex items-center gap-1.5 flex-wrap">
+            <div className="flex items-center gap-1 flex-nowrap">
               {PRIORITY_OPTIONS.map((option) => {
                 const isSelected = currentPriority === option;
                 const styles = PRIORITY_BUTTON_STYLES[option];
@@ -322,7 +322,7 @@ export function CategoryQuestionnaire({
                     variant="outline"
                     size="sm"
                     disabled={status === 'saving'}
-                    className={`text-xs px-2.5 py-1 h-7 ${isSelected ? styles.active : styles.base} transition-all ${status === 'saving' ? 'opacity-50' : ''}`}
+                    className={`text-[10px] px-1.5 py-0.5 h-6 whitespace-nowrap ${isSelected ? styles.active : styles.base} transition-all ${status === 'saving' ? 'opacity-50' : ''}`}
                   >
                     {option}
                   </Button>
